@@ -1,58 +1,47 @@
-# create-svelte
+# Heroicons for Svelte
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> A port of the [Heroicons](https://heroicons.com/) SVG icon set for Svelte.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+## Installation
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+The package is installed via NPM:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+npm install --save-dev @withpluto/heroicons-svelte
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Icon names are based on the Heroicon icon name, the theme and the icon size.
 
-```bash
-npm run dev
+For example, the `academic-cap` icon with the `outline` theme and the `24px` size is named `AcademicCapOutline24`.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+`Outline` theme icons only have a `24px` size, though `20px` is available for `Solid` theme icons.
+
+To use the icons in your project
+
+```svelte
+<script>
+  import { AcademicCapOutline24 } from '@withpluto/heroicons-svelte';
+</script>
+
+<AcademicCapOutline24 />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+### Props
 
-## Building
+By default, the icons will have their default size and will inherit the text colour from their parent element.
+Both of these properties can be overwritten via props.
 
-To build your library:
+| Prop  | Type | Default                                | Description                                                                 |
+|-------| ---- |----------------------------------------| --------------------------------------------------------------------------- |
+| `size` | `number` | `24` or `20` depending on icon variant | The size of the icon in pixels.                                              |
+| `color` | `string` | `currentColor`                         | The colour of the icon. This can be any valid CSS colour. |
 
-```bash
-npm run package
-```
+### SVGs
 
-To create a production version of your showcase app:
+If you wish to use the SVGs directly, they are available in the `icons` directory.
 
-```bash
-npm run build
-```
+## License
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
