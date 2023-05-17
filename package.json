@@ -1,5 +1,5 @@
 {
-  "name": "@withpluto/heroicons",
+  "name": "@withpluto/heroicons-svelte",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite dev --port 5176",
