@@ -2,16 +2,16 @@ name: Pull request
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ 16, 18 ]
+        node: [16, 18]
 
     name: Node ${{ matrix.node }} sample
     steps:
@@ -20,5 +20,5 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-      - run: npm ci  # npm clean-install
+      - run: npm ci # npm clean-install
       - run: npm run lint

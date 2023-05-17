@@ -45,10 +45,10 @@ const generateExportPaths = (iconsDir, suffix) => {
   const paths = []
   fs.readdirSync(iconsDir).forEach((file) => {
     paths.push(
-      `export { default as ${file.replace('.svelte', '')}${suffix} } from '${iconsDir.replace(
-        './src/lib',
-        '$lib'
-      )}/${file}'`
+      `export { default as ${file.replace(
+        '.svelte',
+        ''
+      )}${suffix} } from '${iconsDir.replace('./src/lib', '$lib')}/${file}'`
     )
   })
   return paths.join('\n')
