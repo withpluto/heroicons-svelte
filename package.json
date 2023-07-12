@@ -1,6 +1,6 @@
 {
   "name": "@withpluto/heroicons-svelte",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "vite dev --port 5176",
     "prepare": "node prepare && npm run format",
@@ -13,6 +13,7 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
     }
   },

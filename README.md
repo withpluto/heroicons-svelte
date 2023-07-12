@@ -22,7 +22,7 @@ To use the icons in your project
 
 ```svelte
 <script>
-  import { AcademicCapOutline24 } from '@withpluto/heroicons-svelte';
+  import { AcademicCapOutline24 } from '@withpluto/heroicons-svelte'
 </script>
 
 <AcademicCapOutline24 />
@@ -33,9 +33,9 @@ To use the icons in your project
 By default, the icons will have their default size and will inherit the text colour from their parent element.
 Both of these properties can be overwritten via props.
 
-| Prop  | Type | Default                                | Description                                                                 |
-|-------| ---- |----------------------------------------| --------------------------------------------------------------------------- |
-| `size` | `number` | `24` or `20` depending on icon variant | The size of the icon in pixels.                                              |
+| Prop    | Type     | Default                                | Description                                               |
+| ------- | -------- | -------------------------------------- | --------------------------------------------------------- |
+| `size`  | `number` | `24` or `20` depending on icon variant | The size of the icon in pixels.                           |
 | `color` | `string` | `currentColor`                         | The colour of the icon. This can be any valid CSS colour. |
 
 ### SVGs
