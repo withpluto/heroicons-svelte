@@ -28,12 +28,21 @@ const buildIcons = async (iconsDir, size) => {
         return console.log(err)
       }
       // Modify the files so that we can pass props if desired.
-      const modified =
-        `<script>\n  export let color = 'currentColor'\n  export let size = ${size}\n</script>\n\n` +
+      let modified =
+        `<script>\n  export let color = 'currentColor'\n  export let size = ${size}\n${
+          iconsDir.includes('outline') ? '  export let strokeWidth = 1.5\n' : ''
+        }</script>\n\n` +
         data
           .replace(/"#(\w{6})"/g, '{color}')
           .replace(/width="\d{2}"/, 'width={size}')
           .replace(/height="\d{2}"/, 'height={size}')
+
+      if (iconsDir.includes('outline')) {
+        modified = modified.replace(
+          /stroke-width="(\d|\.)*"/,
+          'stroke-width={strokeWidth}'
+        )
+      }
       fs.writeFile(dest, modified, 'utf8', function (err) {
         if (err) return console.log('Error processing file: ', dest)
       })

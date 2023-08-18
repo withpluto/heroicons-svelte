@@ -1,6 +1,7 @@
 <script>
   export let color = 'currentColor'
   export let size = 24
+  export let strokeWidth = 1.5
 </script>
 
 <svg
@@ -13,7 +14,7 @@
   <path
     d="M12 6V12H16.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
     stroke={color}
-    stroke-width="1.5"
+    stroke-width={strokeWidth}
     stroke-linecap="round"
     stroke-linejoin="round"
   />
