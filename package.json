@@ -1,6 +1,6 @@
 {
   "name": "@withpluto/heroicons-svelte",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "dev": "vite dev --port 5176",
     "prepare": "node prepare && npm run format",
@@ -23,23 +23,23 @@
     "!dist/**/*.spec.*"
   ],
   "peerDependencies": {
-    "svelte": "^3.54.0"
+    "svelte": ">=3.54.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
-    "@sveltejs/kit": "^1.15.2",
-    "@sveltejs/package": "^2.0.0",
+    "@sveltejs/kit": "^1.20.4",
+    "@sveltejs/package": "^2.2.2",
     "chalk": "^5.2.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-plugin-svelte": "^2.33.2",
     "prettier": "^2.8.0",
-    "prettier-plugin-svelte": "^2.8.1",
+    "prettier-plugin-svelte": "^2.10.1",
     "publint": "^0.1.9",
-    "svelte": "^3.54.0",
+    "svelte": "^4.0.0",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
-    "vite": "^4.2.0"
+    "vite": "^4.4.9"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
