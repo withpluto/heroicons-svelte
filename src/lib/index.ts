@@ -1,3 +1,5 @@
+export * from './types'
+
 export { default as AcademicCapSolid20 } from '$lib/components/20/solid/AcademicCap.svelte'
 export { default as AdjustmentsHorizontalSolid20 } from '$lib/components/20/solid/AdjustmentsHorizontal.svelte'
 export { default as AdjustmentsVerticalSolid20 } from '$lib/components/20/solid/AdjustmentsVertical.svelte'
