@@ -13,7 +13,7 @@ function sveltify(filename) {
 
 const ICONS_DIR = './src/lib/icons'
 const COMPONENTS_DIR = './src/lib/components'
-const INDEX_FILE = './src/lib/index.js'
+const INDEX_FILE = './src/lib/index.ts'
 
 const buildIcons = async (iconsDir, size) => {
   fs.readdirSync(iconsDir).forEach((file) => {
@@ -70,13 +70,14 @@ const main = async () => {
     buildIcons(`${ICONS_DIR}/24/outline`, 24),
     buildIcons(`${ICONS_DIR}/24/solid`, 24)
   ])
+  const typesExport = "export * from './types'\n\n"
   const paths =
     generateExportPaths(`${COMPONENTS_DIR}/20/solid`, 'Solid20') +
     '\n' +
     generateExportPaths(`${COMPONENTS_DIR}/24/outline`, 'Outline24') +
     '\n' +
     generateExportPaths(`${COMPONENTS_DIR}/24/solid`, 'Solid24')
-  fs.writeFileSync(INDEX_FILE, paths)
+  fs.writeFileSync(INDEX_FILE, typesExport + paths)
   console.debug('Done!')
 }
 
