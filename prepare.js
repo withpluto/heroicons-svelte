@@ -34,6 +34,7 @@ const buildIcons = async (iconsDir, size) => {
         }</script>\n\n` +
         data
           .replace(/"#(\w{6})"/g, '{color}')
+          .replaceAll('black', '{color}')
           .replace(/width="\d{2}"/, 'width={size}')
           .replace(/height="\d{2}"/, 'height={size}')
 
