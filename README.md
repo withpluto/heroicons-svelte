@@ -42,6 +42,10 @@ Both of these properties can be overwritten via props.
 
 If you wish to use the SVGs directly, they are available in the `icons` directory.
 
+## Version
+
+The latest version of the project uses Heroicons v2.1.5.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

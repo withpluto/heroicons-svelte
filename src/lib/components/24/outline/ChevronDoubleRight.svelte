@@ -12,7 +12,7 @@
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    d="M11.25 4.5L18.75 12L11.25 19.5M5.25 4.5L12.75 12L5.25 19.5"
+    d="M5.25 4.5L12.75 12L5.25 19.5M11.25 4.5L18.75 12L11.25 19.5"
     stroke={color}
     stroke-width={strokeWidth}
     stroke-linecap="round"

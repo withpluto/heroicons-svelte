@@ -12,7 +12,7 @@
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    d="M19.5 12L4.5 12"
+    d="M5 12H19"
     stroke={color}
     stroke-width={strokeWidth}
     stroke-linecap="round"

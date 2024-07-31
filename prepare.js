@@ -35,6 +35,7 @@ const buildIcons = async (iconsDir, size) => {
         data
           .replace(/"#(\w{6})"/g, '{color}')
           .replaceAll('black', '{color}')
+          .replaceAll('currentColor', '{color}')
           .replace(/width="\d{2}"/, 'width={size}')
           .replace(/height="\d{2}"/, 'height={size}')
 
@@ -67,12 +68,15 @@ const generateExportPaths = (iconsDir, suffix) => {
 const main = async () => {
   console.debug('Preparing Heroicons...')
   await Promise.all([
+    buildIcons(`${ICONS_DIR}/16/solid`, 16),
     buildIcons(`${ICONS_DIR}/20/solid`, 20),
     buildIcons(`${ICONS_DIR}/24/outline`, 24),
     buildIcons(`${ICONS_DIR}/24/solid`, 24)
   ])
   const typesExport = "export * from './types'\n\n"
   const paths =
+    generateExportPaths(`${COMPONENTS_DIR}/16/solid`, 'Solid16') +
+    '\n' +
     generateExportPaths(`${COMPONENTS_DIR}/20/solid`, 'Solid20') +
     '\n' +
     generateExportPaths(`${COMPONENTS_DIR}/24/outline`, 'Outline24') +
